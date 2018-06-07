@@ -19,7 +19,7 @@ export const headTemplate = ({
   '  <meta name="format-detection" content="telephone=no">',
   '  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, viewport-fit=cover">',
   '  <meta name="msapplication-tap-highlight" content="no">',
-  '  <meta http-equiv="Content-Security-Policy" content="default-src * gap: data: blob: \'unsafe-inline\' \'unsafe-eval\' ws: wss:;">',
+  '  <meta http-equiv="Content-Security-Policy" content="* 'self' default-src * data: blob: \'unsafe-inline\' \'unsafe-eval\' ws: wss: cdvfile: file: ;">',
 
   // We are explicitly not using bundledJsCssUrlRewriteHook: in cordova we serve assets up directly from disk, so rewriting the URL does not make sense
   ...(css || []).map(file =>
